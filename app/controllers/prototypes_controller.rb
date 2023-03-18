@@ -13,6 +13,7 @@ class PrototypesController < ApplicationController
     @prototype = Prototype.find(params[:id])
     # 詳細ページのコメントフォーム
     @comment = Comment.new
+    
     @comments = @prototype.comments.includes(:user)
   end
 
